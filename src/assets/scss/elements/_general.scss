@@ -1,0 +1,95 @@
+/*
+*
+* General styles
+*
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: $base-font-size;
+}
+
+body {
+    background: $body-background;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    line-height: $global-lineheight;
+    color: $body-font-color;
+    overflow-x: hidden;
+    padding-top: 100px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+:focus {
+    outline: 2px solid $primary-colour;
+}
+::selection {
+    background: $primary-colour;
+    color: #ffffff;
+}
+::-moz-selection {
+    background: $primary-colour;
+    color: #ffffff;
+}
+
+p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.block-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+// 5 col bootstrap
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+// preloader
+body.preloader-site {
+    overflow: hidden;
+}
+
+.preloader-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}

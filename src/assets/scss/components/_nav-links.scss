@@ -1,0 +1,98 @@
+
+/*
+*
+* Nav links
+*
+*/
+
+.navigation.pagination .nav-links {
+    margin-top: rem-calc(40);
+    text-align: right;
+    span:not(.dots):not(.current), a {
+        padding: rem-calc(7 15);
+        border-bottom: none;
+        color: darken($light-grey, 15%);
+        font-weight: 600;
+        display: inline-block;
+        background-color:  $light-grey;
+        border: 2px solid darken($light-grey, 2%);
+        -webkit-transition: all .3s ease-out;
+        -moz-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
+    a:hover {
+        background-color: $primary-colour;
+        color: #fff;
+        text-decoration: none;
+    }
+    .dots, .current {
+      color: darken($light-grey, 15%);
+      font-weight: 600;
+      padding: rem-calc(7 7);
+    }
+}
+
+.c-post-navigation {
+    $p: &;
+    &__links {
+        display: flex;
+        margin-bottom: 4rem;
+    }
+    &__post {
+        flex: 1;
+        max-width: 50%;
+        &--next {
+            #{$p}__thumbnail {
+                order: 1;
+                margin-left: rem-calc(15);
+            }
+            #{$p}__link {
+                justify-content: flex-end;
+                border-left: none !important;
+            }
+            #{$p}__content {
+                text-align: right;
+            }
+        }
+        &--prev {
+            #{$p}__thumbnail {
+                margin-right: rem-calc(15);
+            }
+            #{$p}__link {
+                justify-content: flex-start;
+            }
+        }
+    }
+    &__subtitle {
+        display: block;
+        color: #9099b3;
+        font-weight: 700;
+        font-size: rem-calc(14);
+    }
+    &__title {
+        display: block;
+        color: $primary-colour;
+        font-weight: 600;
+    }
+    &__content {
+        flex: 1;
+        margin: rem-calc(10 0);
+    }
+    &__link {
+        display: flex;
+        height: 100%;
+        background-color: $light-grey;
+        border: 1px solid darken($light-grey, 5%);
+        padding: rem-calc(20);
+        overflow: hidden;
+        outline: none;
+    }
+    &__thumbnail {
+        width: 100px;
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+}

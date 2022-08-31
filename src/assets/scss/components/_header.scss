@@ -1,0 +1,115 @@
+/*
+*
+* Header styles
+*
+*/
+
+.admin-bar {
+  #siteHeader {
+    top: 46px;
+  }
+}
+
+#siteHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  #mainNav {
+    background-color: #ffffff;
+    position: relative;
+    height: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    .container {
+      position: relative;
+      a {
+        border: none;
+      }
+    }
+    .navbar-brand {
+      left: 0;
+    }
+    .custom-logo {
+      max-width: 196px;
+    }
+    #navbarResponsive {
+      position: absolute;
+      right: 0;
+      li {
+        padding: 0 1rem;
+        a {
+          font-family: "Open Sans";
+          font-weight: 700;
+          font-size: 14px;
+          letter-spacing: 0px;
+          font-style: normal;
+          color: $primary-colour;
+          text-transform: uppercase;
+          text-decoration: none;
+          outline: none;
+          -webkit-transition: all .3s ease-out;
+          -moz-transition: all .3s ease-out;
+          -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+          &:hover {
+            color: $secondary-colour;
+          }
+          &:active {
+            color: $secondary-colour;
+          }
+        }
+      }
+      .active {
+        a {
+          color: $secondary-colour;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  border: none!important;
+  content: "\f107"!important; /* the desired FontAwesome icon */
+  font-family: "Font Awesome 5 Free";
+  vertical-align: 0; /* to center vertically */
+}
+
+.dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity:0;
+  transform: translateY(55px);
+  transition:.5s ease all;
+  background-color: #ffffff;
+  border: 1px solid #dce2f2;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 5px 0 #dce2f2;
+  padding: 8px 0!important;
+  li {
+    padding: 0px 20px!important;
+    margin: 0;
+    a {
+      color: $primary-colour!important;
+      background-color: transparent!important;
+      padding: 15px 0!important;
+      font-size: .8rem!important;
+      text-transform: none!important;
+      border-bottom: 1px dotted #dce2f2!important;
+        &:hover {
+          color: $secondary-colour!important;
+        }
+    }
+    &:last-of-type a {
+      border: none!important;
+    }
+  }
+}
+
+.dropdown-menu-active {
+  display: block;
+  visibility: visible;
+  opacity:1;
+  transform: translateY(33px);
+  transition:.5s ease all;
+}
